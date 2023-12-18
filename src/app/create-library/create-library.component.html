@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="nameStyle">Create a new Library </div>
+  <mat-form-field class = "fullWidthItem">
+    <mat-label>Library name</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="name" required>
+  </mat-form-field>
+  <mat-form-field class = "fullWidthItem">
+    <mat-label>Libraries street</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="street" required>
+  </mat-form-field>
+  <mat-form-field class = "fullWidthItem">
+    <mat-label>Phone number</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="phone" required>
+  </mat-form-field>
+  <mat-form-field class = "fullWidthItem">
+    <mat-label>Library director</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="director" required>
+  </mat-form-field>
+
+  <div>
+    <button class="fullWidthItem" [disabled]="isButtonDisabled" mat-raised-button style="background-color: green; font-weight: bold;" (click)="onPress()">Create Library</button>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.main{
+  background-color: cadetblue;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  position:fixed;
+  bottom:0px;
+  width: 100%;
+}
+
+:host {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: bold;
+}

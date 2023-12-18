@@ -1,0 +1,28 @@
+<div class="imageContainer">
+  <img class="image" src="assets/loginphoto.jpg" alt="My Image">
+</div>
+
+<div>
+  <div>
+    <span class="text-class container">Login</span>
+    <form class="mt-12 w-full flex flex-col items-center">
+      <div class="container">
+        <mat-form-field class="fullWidthItem">
+          <mat-label>Username</mat-label>
+          <input (input)="updateButtonState()" matInput type="userName" [(ngModel)]="username" name="userName" required>
+        </mat-form-field>
+      </div>
+      <div class="spacer"></div>
+      <div class="container">
+        <mat-form-field class="fullWidthItem">
+          <mat-label>Password</mat-label>
+          <input (input)="updateButtonState()" matInput type="password" [(ngModel)]="password" name="password" required>
+        </mat-form-field>
+      </div>
+      <div class="container">
+        <button class="fullWidthItem" [disabled]="isButtonDisabled" mat-raised-button style="background-color: cadetblue; font-weight: bold;" (click)="onSubmit()">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+

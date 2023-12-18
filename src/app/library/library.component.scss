@@ -1,0 +1,46 @@
+.button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.buttonContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-spinner ::ng-deep circle {
+  stroke: #ce7b00;
+}
+
+.centerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.container div:nth-child(odd) {
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.container div:nth-child(even) {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  display: inline-block;
+}

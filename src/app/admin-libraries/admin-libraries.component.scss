@@ -1,0 +1,94 @@
+.customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.container{
+  width: 50%
+}
+
+.mainContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+tr:nth-child(even){background-color: lightgray;}
+
+.mat-row:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.mat-row {
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mat-header {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.table{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+p {
+  padding-left: 10px;
+}
+
+.description{
+  display: flex;
+  align-items: center;
+}
+
+.createButton{
+  margin-top: 20px;
+}
+
+.custom-spinner ::ng-deep circle {
+  stroke: #ce7b00;
+}
+
+.centerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .container{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .createButton{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+
+  .table{
+    margin-top: 10px;
+  }
+
+  .createButton{
+    margin-top: 20px;
+  }
+}
+
+::ng-deep .mat-sort-header-arrow {
+  color: white !important;
+}
+
+.message{
+  margin-left: 20px;
+  margin-top: 12px;
+}

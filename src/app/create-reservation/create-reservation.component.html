@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="nameStyle">Create a new Resevation </div>
+    <mat-form-field class="fullWidthItem">
+      <mat-label>Reservation end date</mat-label>
+      <input (ngModelChange)="updateButtonState()" matInput [(ngModel)]="endDate" type="datetime" placeholder="endDate">
+    </mat-form-field>
+  <div>
+    <button class="fullWidthItem" [disabled]="isButtonDisabled" mat-raised-button style="background-color: green; font-weight: bold;" (click)="onPress()">Create Reservation</button>
+  </div>
+</div>

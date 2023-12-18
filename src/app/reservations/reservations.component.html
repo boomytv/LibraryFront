@@ -1,0 +1,50 @@
+<div>
+  <!-- Library Dropdown -->
+  <mat-form-field appearance="fill" style="margin-left: 16px; margin-top: 16px">
+    <mat-label>Select Library</mat-label>
+    <mat-select [(ngModel)]="libraryId" (selectionChange)="getBooksInLibrary()">
+      <mat-option *ngFor="let library of libraries" [value]="library.id">{{ library.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Book Dropdown -->
+  <mat-form-field appearance="fill" style="margin-left: 16px; margin-top: 16px">
+    <mat-label>Select Book</mat-label>
+    <mat-select [(ngModel)]="bookId" [disabled]="!libraryId">
+      <mat-option *ngFor="let book of books" [value]="book.id">{{ book.title }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Get Books Button -->
+  <button mat-raised-button class="createButton" color="primary" style="margin-left: 16px" (click)="getReservationsInBook()" [disabled]="!bookId">Get Reservations</button>
+</div>
+
+<div class="mainContainer">
+  <div class="container">
+    <div *ngIf="reservations.length>0 && initialized">
+
+      <div class="description">
+        <button class="createButton" mat-raised-button style="background-color: cadetblue; font-weight: bold;" (click)="navigateToCreateReservation()">Create Reservation</button>
+      </div>
+
+      <table mat-table [dataSource]="data" class="table">
+
+        <ng-container matColumnDef="reservetimestart">
+          <th mat-header-cell *matHeaderCellDef> Reservation start </th>
+          <td mat-cell *matCellDef="let item">{{item.reservetimestart | date: 'short'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="reservetimeend">
+          <th mat-header-cell *matHeaderCellDef> Reservation end </th>
+          <td mat-cell *matCellDef="let item">{{item.reservetimeend | date: 'short'}} </td>
+        </ng-container>
+        <tr mat-header-row class="mat-header" *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row class="mat-row" *matRowDef="let row; columns: displayedColumns;" (click)="navigateToReservation(row)"></tr>
+      </table>
+    </div>
+
+    <div class="description" *ngIf="reservations.length<=0 && initialized">
+      <button class="createButton" mat-raised-button style="background-color: blue; font-weight: bold;" (click)="navigateToCreateReservation()">Create Reservation</button>
+      <div class="message">There are no reservations for this book</div>
+    </div>
+  </div>
+</div>

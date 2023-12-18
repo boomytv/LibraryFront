@@ -1,0 +1,37 @@
+/* header.component.css or your global styles */
+.header-nav {
+  background-color: lightblue;
+}
+
+.lastButton {
+  display: flex;
+  align-items: center;
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the font bold */
+}
+.button {
+  display: flex;
+  align-items: center;
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the font bold */
+}
+
+.header-menu {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.menu-items {
+  display: flex;
+  list-style-type: none; /* Remove list styling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.menu-item {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.flex-grow {
+  flex-grow: 1; /* Take up remaining space */
+}

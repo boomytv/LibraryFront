@@ -1,0 +1,23 @@
+<div class="container" *ngIf="initialized">
+  <div class="nameStyle">Edit Library </div>
+  <mat-form-field class="fullWidthItem">
+    <mat-label>Library name</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="name" required>
+  </mat-form-field>
+  <mat-form-field class="fullWidthItem">
+    <mat-label>Street</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="street" required>
+  </mat-form-field>
+  <mat-form-field class="fullWidthItem">
+    <mat-label>Phone</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="phone" required>
+  </mat-form-field>
+  <mat-form-field class="fullWidthItem">
+    <mat-label>Director</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="director" required>
+  </mat-form-field>
+
+  <div>
+    <button class="fullWidthItem" [disabled]="isButtonDisabled" mat-raised-button style="background-color: green; font-weight: bold;" (click)="onPress()">Edit</button>
+  </div>
+</div>

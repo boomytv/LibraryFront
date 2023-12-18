@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="nameStyle">Create a new Book </div>
+  <mat-form-field class = "fullWidthItem">
+    <mat-label>Book name</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="title" required>
+  </mat-form-field>
+  <mat-form-field class = "fullWidthItem">
+    <mat-label>Author</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="author" required>
+  </mat-form-field>
+  <mat-form-field class = "fullWidthItem">
+    <mat-label>Publisher</mat-label>
+    <input (input)="updateButtonState()" matInput [(ngModel)]="publisher" required>
+  </mat-form-field>
+
+  <div>
+    <button class="fullWidthItem" [disabled]="isButtonDisabled" mat-raised-button style="background-color: green; font-weight: bold;" (click)="onPress()">Create Book</button>
+  </div>
+</div>

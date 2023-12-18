@@ -1,0 +1,26 @@
+<header>
+  <nav class="header-nav">
+    <ul class="header-menu">
+      <li class="menu-items">
+        <a class="menu-item" *ngIf="isAdmin">
+          <button class="button" mat-button (click)="navigateToLibraries()">Libraries</button>
+        </a>
+        <a class="menu-item" *ngIf="isAdmin || isWorker">
+          <button class="button" mat-button (click)="navigateToBooks()">Books</button>
+        </a>
+        <a class="menu-item" *ngIf="authenticated">
+          <button class="button" mat-button (click)="navigateToReservations()">Reservations</button>
+        </a>
+        <a class="menu-item" *ngIf="!authenticated">
+          <button class="button" mat-button (click)="navigateToLogin()">Login</button>
+        </a>
+      </li>
+      <li class="flex-grow"></li>
+        <a class="menu-item" *ngIf="authenticated">
+          <button class="lastButton" mat-button (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon> Logout
+          </button>
+        </a>
+    </ul>
+  </nav>
+</header>

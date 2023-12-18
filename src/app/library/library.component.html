@@ -1,0 +1,24 @@
+<div *ngIf="initialized">
+  <div class="container">
+    <div>Library Name:</div>
+    <div>{{library.name}}</div>
+  </div>
+  <div class="container">
+    <div>Library Street:</div>
+    <div>{{library.street}}</div>
+  </div>
+  <div class="container">
+    <div>Library Phone:</div>
+    <div>{{library.phone}}</div>
+  </div>
+  <div class="container">
+    <div>Library Director:</div>
+    <div>{{library.director}}</div>
+  </div>
+
+  <div class="buttonContainer">
+    <button class="button" mat-raised-button style="background-color: green; font-weight: bold;" (click)="onEditClick()">Edit</button>
+    <br>
+    <button class="button" mat-raised-button style="background-color: red; font-weight: bold;" (click)="onDeleteClick()">Delete</button>
+  </div>
+</div>

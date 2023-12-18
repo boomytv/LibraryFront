@@ -1,0 +1,7 @@
+<div class="container" *ngIf="initialized">
+  <div class="nameStyle">Edit Reservation </div>
+  <mat-form-field class="fullWidthItem">
+    <mat-label>Reservation end date</mat-label>
+    <input (ngModelChange)="updateButtonState()" matInput [(ngModel)]="endDate" type="datetime" placeholder="endDate">
+  </mat-form-field>
+</div>
